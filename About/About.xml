@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+	<!-- This is both the displayed name of your mod as well as the name used for patch targeting. -->
+    <name>Food Is For Thinbloods</name>
+	
+	<!-- Your name goes here. -->
+    <author>N05tromo</author>
+
+	<!-- This is the internal identifier for your mod. -->
+	<!-- It is recommended that you make it unique to as to avoid potential collisions with other authors; -->
+	<!--     if Rimworld detects multiple mods with the same packageId then it will refuse to load all of them. -->
+    <packageId>N05tromo.FoodIsForThinbloods</packageId>
+	
+	<!-- This is the description of your mod shown in both the vanilla mod manager as well as modded managers. -->
+    <description>
+Food Is For Thinbloods (WIP)
+
+The Hemogen Drain gene now still increases hemogen drain by -8 per day (like vanilla) but also completely disables hunger drain.
+That means pawns with this gene (such as vanilla Sanguophages) no longer need to eat any food to survive.
+You can still make custom xenotypes that need/use hemogen but also need regular food by using other Hemogen genes.
+
+This is just a quick, simple mod I made for my own game and a custom xenotype I'm working on. I decided to publish it because there doesn't seem to be another mod that does the same thing for 1.5 (yet).
+I have chosen to modify the Hemogen Drain gene instead of adding a custom one because it was the simplest way to disable hunger in vanilla Sanguophages (which I think is what most folks will use this mod for), even if adding the mod midgame.
+I don't think removing the mod should break anything but I wouldn't try without a backup save.
+
+At some point I will probably re-do a better version of this mod (or a new mod entirely) that, instead of completely disabling hunger, ties it to Hemogen level (or scales Hemogen level drain with metabolic efficiency).
+As it is hemogen drain is always the same, no matter what the pawn's hunger rate was, which feels a bit cheap.
+	</description>
+
+	<!-- These are the RimWorld game versions that your mod supports. -->
+	<!-- It is recommended that you only list versions that you have explicitly tested to ensure they work, -->
+	<!-- as even basic XML options can change between major versions of the game. -->
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+		</li>
+	</modDependencies>
+
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+	</loadAfter>
+	
+</ModMetaData>

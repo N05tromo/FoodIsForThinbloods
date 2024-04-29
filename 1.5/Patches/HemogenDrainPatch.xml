@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationReplace">
+
+		<success>Always</success>
+
+		<xpath>/Defs/GeneDef[defName = "HemogenDrain"]/description</xpath>
+
+		<value>
+			<description>Carriers lose an additional 8 hemogen per day to sustain their metabolism, but no longer need to consume any food.</description>
+		</value>
+
+	</Operation>
+
+
+	<Operation Class="PatchOperationAddModExtension">
+
+		<success>Always</success>
+
+		<xpath>/Defs/GeneDef[defName = "HemogenDrain"]</xpath>
+
+		<value>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<hediffToWholeBody>HemogenMetabolism</hediffToWholeBody>
+			</li>
+		</value>
+
+	</Operation>
+
+
+</Patch>
